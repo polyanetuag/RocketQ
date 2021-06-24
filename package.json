@@ -1,0 +1,27 @@
+{
+  "name": "RocketQ",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para gerenciar perguntas anônimas de usuários, direcionadas ao dono da página. Desenvolvido na NLW6 Rocketseat - Missão Discover",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polyanetuag/RocketQ.git"
+  },
+  "keywords": [],
+  "author": "Polyane Tuag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polyanetuag/RocketQ/issues"
+  },
+  "homepage": "https://github.com/polyanetuag/RocketQ#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
