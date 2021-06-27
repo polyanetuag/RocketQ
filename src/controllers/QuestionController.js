@@ -3,6 +3,6 @@ module.exports = {
     const roomId = req.params.room
     const questionId = req.params.question
     const action = req.params.action
-    const password = req;body.password
+    const password = req.body.password
   }
 }
