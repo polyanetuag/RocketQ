@@ -43,7 +43,7 @@
       <main>
         <section id="question-form">
           <h2>Faça sua pergunta</h2>
-          <form action="">
+          <form action="/question/create/<%= roomId %>" method="POST">
             <label class="sr-only" for-id="question"
               >O que você quer perguntar?</label
             >
@@ -66,6 +66,8 @@
         <section id="questions">
           <h2 class="sr-only">Perguntas da comunidade</h2>
           <div class="questions">
+            <% questions.forEach(question => { %>
+
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
@@ -73,7 +75,7 @@
                 </div>
 
                 <div class="question">
-                  <p>Qual a diferença entre const, var e let no JavaScript?</p>
+                  <p><%= question.title %></p>
                 </div>
               </div>
 
@@ -88,56 +90,7 @@
                 </a>
               </div>
             </div>
-
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="user" />
-                </div>
-
-                <div class="question">
-                  <p>O que é JavaScript?</p>
-                </div>
-              </div>
-
-              <div class="actions">
-                <a href="#" class="check" data-id="3">
-                  <img src="/images/check.svg" alt="Marcar como lida" />
-                  Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="3">
-                  <img src="/images/trash.svg" alt="Excluir" />
-                  Excluir
-                </a>
-              </div>
-            </div>
-
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="user" />
-                </div>
-
-                <div class="question">
-                  <p>
-                    Você já sabe quais bases você precisa melhorar para alcançar
-                    o seu próximo nível com maestria? Definiu o seu foco e
-                    objetivo para seguir em frente?
-                  </p>
-                </div>
-              </div>
-
-              <div class="actions">
-                <a href="#" class="check" data-id="4">
-                  <img src="/images/check.svg" alt="Marcar como lida" />
-                  Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="4">
-                  <img src="/images/trash.svg" alt="Excluir" />
-                  Excluir
-                </a>
-              </div>
-            </div>
+            <% }) %> <% questionsRead.forEach(questionRead => { %>
 
             <div class="question-wrapper read">
               <div class="question-content">
@@ -146,7 +99,7 @@
                 </div>
 
                 <div class="question">
-                  <p>O que é TypeScript?</p>
+                  <p><%= questionRead.title %></p>
                 </div>
               </div>
 
@@ -157,6 +110,7 @@
                 </a>
               </div>
             </div>
+            <% })%>
           </div>
         </section>
       </main>
